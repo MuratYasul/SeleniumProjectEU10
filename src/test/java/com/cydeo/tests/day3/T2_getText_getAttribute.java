@@ -21,6 +21,16 @@ public class T2_getText_getAttribute {
         //Expected : Remember me on this computer
 
         WebElement rememberMeLabel = driver.findElement(By.className("login-item-checkbox-label"));
+        String expectedRememberMeLabel = "Remember me on this computer";
+        String actualRememberMeLabel = rememberMeLabel.getText();
+
+        if (actualRememberMeLabel.equals(expectedRememberMeLabel)){
+            System.out.println("Label verification PASSED!");
+        }else {
+            System.out.println("Label Verification FAILED!!!!!");
+        }
+
+
 
         //4. Verify "forgot password" link text is as expected:
         //Expected: Forgot your password?
