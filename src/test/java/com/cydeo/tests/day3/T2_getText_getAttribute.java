@@ -1,5 +1,6 @@
 package com.cydeo.tests.day3;
 
+
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,6 +14,7 @@ public class T2_getText_getAttribute {
         // WebDriver driver = new ChromeDriver();
         WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
+
 
         //2. Go to: https://login1.nextbasecrm.com/
         driver.get("https://login1.nextbasecrm.com/");
@@ -36,19 +38,28 @@ public class T2_getText_getAttribute {
 
         WebElement forgotPasswordLink = driver.findElement(By.className("login-link-forgot-pass"));
 
-        String expectedForgotPasswordLink = "Forgot your password?";
+        String expectedForgotPasswordLink = "FORGOT YOUR PASSWORD?";
         String actualForgotPasswordLink = forgotPasswordLink.getText();
 
         if (actualForgotPasswordLink.equals(expectedForgotPasswordLink)){
             System.out.println("Forgot Password Link verification PASSED!");
         }else {
+            System.out.println("actualForgotPasswordLink = " + actualForgotPasswordLink);
+            System.out.println("expectedForgotPasswordLink = " + expectedForgotPasswordLink);
             System.out.println("Forgot Password Link Verification FAILED!!!!!");
         }
 
-
-
-
         //5.Verify "forgot password" href attribute's value contains expected:
         //Expected: forgot_password=yes
+        String expectedInHref = "forgot_password=yes";
+        String actualHrefAttributeValue = forgotPasswordLink.getAttribute("href");
+        System.out.println("actualHrefAttributeValue = " + actualHrefAttributeValue);
+
+        if (actualHrefAttributeValue.contains(expectedInHref)){
+            System.out.println("HREF attribute value verification PASSED!");
+        } else  {
+            System.out.println("HREF attribute value verification FAILED!!!");
+        }
+      //  driver.quit();
     }
 }
