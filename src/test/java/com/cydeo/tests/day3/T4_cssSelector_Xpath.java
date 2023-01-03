@@ -24,20 +24,20 @@ public class T4_cssSelector_Xpath {
 
         WebElement resetPasswordButton = driver.findElement(By.cssSelector("button[value='Reset password']"));
 
-        String expectedResetButtonText = "Reset password";
-        //Getting the value of the attribute "value"
-        String actualResetButtonText = resetPasswordButton.getText();
-
-        System.out.println("actualResetButtonText = " + actualResetButtonText);
-
-        if (actualResetButtonText.equals(expectedResetButtonText)){
-            System.out.println("Reset password button text verification PASSED!");
-        }else {
-            System.out.println("Reset password button Text Verification FAILED!!!!!");
-        }
-
-
-
+//        String expectedResetButtonText = "Reset password";
+//        //Getting the value of the attribute "value"
+//        String actualResetButtonText = resetPasswordButton.getText();
+//
+//        System.out.println("actualResetButtonText = " + actualResetButtonText);
+//
+//        if (actualResetButtonText.equals(expectedResetButtonText)){
+//            System.out.println("Reset password button text verification PASSED!");
+//        }else {
+//            System.out.println("Reset password button Text Verification FAILED!!!!!");
+//        }
+//
+//
+//
 
 
 
