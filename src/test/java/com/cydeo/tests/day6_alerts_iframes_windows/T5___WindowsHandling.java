@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class T5___WindowsHandling {
@@ -44,7 +45,11 @@ public class T5___WindowsHandling {
         clickHere.click();
 
         //6. Switch to new window
-        for (String each: driver.getWindowHandles()) {
+        Set<String>allWindowHandles = driver.getWindowHandles();
+        //window handle 1 - main window
+        // window handle 2 - 2nd window
+
+        for (String each: allWindowHandles) {
             driver.switchTo().window(each);
             System.out.println("Current title while switching windows: "+ driver.getTitle());
         }
