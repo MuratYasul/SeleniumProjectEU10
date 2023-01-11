@@ -67,6 +67,6 @@ public class T5___WindowsHandling {
     @AfterMethod
     public void tearDown(){
         //driver.close();
-       // driver.quit();
+       driver.quit();
     }
 }

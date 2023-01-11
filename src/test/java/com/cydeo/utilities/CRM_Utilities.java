@@ -27,6 +27,23 @@ public class CRM_Utilities {
 
     }
 
+    public static void crm_login (WebDriver driver, String userName, String password) throws InterruptedException {
+        //3. Enter valid username
+        WebElement inputUserName = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
+        inputUserName.sendKeys(userName);
+
+        Thread.sleep(1000);
+        //helpdesk1@cybertekschool.com UserUser
+        //helpdesk1@cybertekschool.com UserUser
+
+        //4.Enter valid password
+        WebElement inputPassword = driver.findElement(By.xpath("//input[@name='USER_PASSWORD']"));
+        inputPassword.sendKeys(password);
+
+        //5. Click to 'LogIn' button
+        WebElement loginButton = driver.findElement(By.xpath("//input[@value='Log In']"));
+        loginButton.click();
 
 
+    }
 }
