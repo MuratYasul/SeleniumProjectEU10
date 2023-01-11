@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -59,6 +60,13 @@ public class T5___WindowsHandling {
         actualTitle= driver.getTitle();
         Assert.assertEquals(actualTitle, expectedTitleAfterClick);
         System.out.println("Title after click : "+ actualTitle);
+        //if we want to go bact to main page, we can use already stored main handle
+        driver.switchTo().window(mainHandle);
 
+    }
+    @AfterMethod
+    public void tearDown(){
+        //driver.close();
+       // driver.quit();
     }
 }
