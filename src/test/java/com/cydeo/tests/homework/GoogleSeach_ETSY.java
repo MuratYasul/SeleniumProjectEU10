@@ -25,7 +25,7 @@ public class GoogleSeach_ETSY {
         //Thread.sleep(2000)
         // 4. Click ETSY search button
         WebElement etsySearchBox = driver.findElement(By.name("search_query"));//this locator will search all attributes then return the first match.
-        etsySearchBox.sendKeys("wooden spoon"+ Keys.ENTER);//this method goes to google search box, type apple, then click enter, then search "apple" word
+        etsySearchBox.sendKeys("Wooden spoon"+ Keys.ENTER);//this method goes to google search box, type apple, then click enter, then search "apple" word
 
         //5. Verify title:
         //Expected: Title should start with "wooden spoon" word

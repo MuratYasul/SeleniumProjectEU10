@@ -23,6 +23,6 @@ public class P02_CloseAndQuitBrowser {
      //  driver.close();
 
         //close all browser window opened by driver
-      driver.quit();
+    driver.quit();
     }
 }
